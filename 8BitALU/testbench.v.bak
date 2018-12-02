@@ -1,0 +1,4 @@
+module testbench();
+	reg			a, b, cin;
+	wire[7:0] 	out;
+	wire		cou;

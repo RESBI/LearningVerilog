@@ -1,0 +1,375 @@
+Analysis & Synthesis report for ALU-8Bit
+Sun Dec 02 14:19:24 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Dec 02 14:19:24 2018       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; ALU-8Bit                                    ;
+; Top-level Entity Name              ; ALU                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 65                                          ;
+;     Total combinational functions  ; 65                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 42                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; ALU                ; ALU-8Bit           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v        ;         ;
+; Algorithms.v                     ; yes             ; User Verilog HDL File  ; C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 65    ;
+;                                             ;       ;
+; Total combinational functions               ; 65    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 26    ;
+;     -- 3 input functions                    ; 33    ;
+;     -- <=2 input functions                  ; 6     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 42    ;
+;     -- arithmetic mode                      ; 23    ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 42    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; cou~0 ;
+; Maximum fan-out                             ; 14    ;
+; Total fan-out                               ; 264   ;
+; Average fan-out                             ; 1.77  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |ALU                       ; 65 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |ALU                ; ALU         ; work         ;
+;    |Add:ALU_add|           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add:ALU_add    ; Add         ; work         ;
+;    |Sub:ALU_sub|           ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub:ALU_sub    ; Sub         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; cou$latch                                          ; cou                 ; yes                    ;
+; result[0]$latch                                    ; cou                 ; yes                    ;
+; result[1]$latch                                    ; cou                 ; yes                    ;
+; result[2]$latch                                    ; cou                 ; yes                    ;
+; result[3]$latch                                    ; cou                 ; yes                    ;
+; result[4]$latch                                    ; cou                 ; yes                    ;
+; result[5]$latch                                    ; cou                 ; yes                    ;
+; result[6]$latch                                    ; cou                 ; yes                    ;
+; result[7]$latch                                    ; cou                 ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |ALU|cou                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 42                          ;
+; cycloneiii_lcell_comb ; 65                          ;
+;     arith             ; 23                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 22                          ;
+;     normal            ; 42                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 26                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 5.45                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sun Dec 02 14:19:12 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU-8Bit -c ALU-8Bit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 1
+Warning (12018): Entity "And" will be ignored because it conflicts with Quartus Prime primitive name File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 71
+Warning (12018): Entity "Or" will be ignored because it conflicts with Quartus Prime primitive name File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 77
+Warning (12018): Entity "Xor" will be ignored because it conflicts with Quartus Prime primitive name File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 83
+Info (12021): Found 10 design units, including 10 entities, in source file algorithms.v
+    Info (12023): Found entity 1: Add File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 1
+    Info (12023): Found entity 2: Sub File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 13
+    Info (12023): Found entity 3: Lm File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 31
+    Info (12023): Found entity 4: Rm File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 41
+    Info (12023): Found entity 5: Lmt File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 51
+    Info (12023): Found entity 6: Rmt File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 58
+    Info (12023): Found entity 7: Neg File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 65
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.v
+    Info (12023): Found entity 1: testbench File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/testbench.v Line: 1
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(31): variable "AddResult" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(32): variable "AddCou" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(36): variable "SubResult" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 36
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(37): variable "SubCou" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 37
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(41): variable "LmResult" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(42): variable "LmCou" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 42
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(46): variable "RmResult" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 46
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(47): variable "RmCou" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 47
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(27): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(27): inferring latch(es) for variable "cou", which holds its previous value in one or more paths through the always construct File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 27
+Info (10041): Inferred latch for "cou" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[0]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[1]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[2]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[3]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[4]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[5]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[6]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (10041): Inferred latch for "result[7]" at ALU.v(34) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+Info (12128): Elaborating entity "Add" for hierarchy "Add:ALU_add" File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 22
+Warning (10230): Verilog HDL assignment warning at Algorithms.v(10): truncated value with size 9 to match size of target (8) File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/Algorithms.v Line: 10
+Info (12128): Elaborating entity "Sub" for hierarchy "Sub:ALU_sub" File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 23
+Info (12128): Elaborating entity "Lm" for hierarchy "Lm:ALU_lm" File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 24
+Info (12128): Elaborating entity "Rm" for hierarchy "Rm:ALU_rm" File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 25
+Warning (13012): Latch cou$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[0]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[1]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[2]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[3]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[4]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[5]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[6]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Warning (13012): Latch result[7]$latch has unsafe behavior File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 34
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal chooser[0] File: C:/Users/79193/Desktop/FPGA/Learning/8BitALU/ALU.v Line: 2
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Sun Dec 02 14:19:24 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
+
+
